@@ -1,4 +1,5 @@
-$(document).ready(function(){});
+$(document).ready(function()
+{
   
   //random generate a number between 19 and 120
         //var for number
@@ -6,16 +7,40 @@ $(document).ready(function(){});
     var redGem;
     var greenGem;
     var blueGem;
-    var yelloGem;
+    var yellowGem;
     var wins = 0;
     var losses = 0;
-    var matchNumber;
+
+    var totalScore = 0;
 
     randomNumber = Math.floor(Math.random() * 120);
     console.log(randomNumber);
     $(".match").html(randomNumber);
     //random generate each gem between 1 and 12
-        //yellow gem
+    //yellow gem
+    $("#yellow").on("click",function(){
+        yellowGem = Math.floor(Math.random() * 12);
+        console.log(yellowGem);
+        totalScore = yellowGem + totalScore;
+        console.log(totalScore);
+        if (totalScore === randomNumber)
+        {
+            wins++;
+            alert("You won!");
+
+        }
+        else (totalScore > randomNumber)
+        {
+            losses++;
+            alert("You lost!");
+        }
+        
+
+
+
+
+    });
+        
         //green gem
         //blue gem
         //red gem
@@ -38,6 +63,6 @@ $(document).ready(function(){});
         //blue gem click
     
     //function to reset and play again
-  
+});
   
 
