@@ -1,7 +1,5 @@
 $(document).ready(function()
 {
-  
- 
     //var for number
     var randomNumber;
     var redGem;
@@ -29,7 +27,7 @@ $(document).ready(function()
         wins++;
         alert("You won!");
         $("#totalWins").html(wins);
-        }
+        };
     
     function lost()
         {
@@ -37,13 +35,31 @@ $(document).ready(function()
         losses++;
         alert("You lost!");
         $("#totalLosses").html(losses);
-        }
+        };
     function reset()
         {
         //reseting totalScore and random number
         totalScore = 0;
         $("#totalScore").html(totalScore);
-        }
+        };
+    
+    function condition()
+        {
+        //when totalScore equal to randomNumber Win
+        if (totalScore === randomNumber)
+            {
+            win();
+            reset();
+            randomNum();
+            }
+        //when totalScore greater than randomNumber lose
+        else if (totalScore > randomNumber)
+            {
+            lost();
+            reset();
+            randomNum();
+            }
+        };
     
     
     //yellow gem
@@ -54,20 +70,8 @@ $(document).ready(function()
             console.log("Yellow Gem click " +yellowGem);
             //adding up the clicks to totalScore
             totalScore = yellowGem + totalScore;
-            //when totalScore equal to randomNumber Win
-            if (totalScore === randomNumber)
-                {
-                win();
-                reset();
-                randomNum();
-                }
-            //when totalScore greater than randomNumber lose
-            else if (totalScore > randomNumber)
-                {
-                lost();
-                reset();
-                randomNum();
-                }
+            $("#totalScore").html(totalScore);
+            condition();
         });
     //green gem
     $("#green").on("click",function()
@@ -75,20 +79,8 @@ $(document).ready(function()
             greenGem = Math.floor(Math.random() * 12);
             console.log("Green Gem click " + greenGem);
             totalScore = greenGem + totalScore;
-            //when totalScore equal to randomNumber Win
-            if (totalScore === randomNumber)
-                {
-                win();
-                reset();
-                randomNum();
-                }
-            //when totalScore greater than randomNumber lose
-            else if (totalScore > randomNumber)
-                {
-                lost();
-                reset();
-                randomNum();
-                }
+            $("#totalScore").html(totalScore);
+            condition();
         });
     //red gem
     $("#red").on("click",function()
@@ -96,20 +88,8 @@ $(document).ready(function()
             redGem = Math.floor(Math.random() * 12);
             console.log("Red Gem click " +redGem);
             totalScore = redGem + totalScore;
-            //when totalScore equal to randomNumber Win
-            if (totalScore === randomNumber)
-                {
-                win();
-                reset();
-                randomNum();
-                }
-            //when totalScore greater than randomNumber lose
-            else if (totalScore > randomNumber)
-                {
-                lost();
-                reset();
-                randomNum();
-                }
+            $("#totalScore").html(totalScore);
+            condition();
         });
     //blue gem
     $("#blue").on("click",function()
@@ -117,19 +97,7 @@ $(document).ready(function()
             blueGem = Math.floor(Math.random() * 12);
             console.log("Blue Gem click " +blueGem);
             totalScore = blueGem + totalScore;
-            //when totalScore equal to randomNumber Win
-            if (totalScore === randomNumber)
-                {
-                win();
-                reset();
-                randomNum();
-                }
-            //when totalScore greater than randomNumber lose
-            else if (totalScore > randomNumber)
-                {
-                lost();
-                reset();
-                randomNum();
-                }
+            $("#totalScore").html(totalScore);
+            condition();
         });
 });
