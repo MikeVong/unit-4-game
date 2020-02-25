@@ -22,7 +22,28 @@ $(document).ready(function()
         console.log(randomNumber);
         $(".match").html(randomNumber);
         };
-
+    
+    function win()
+        {
+        //adding 1 to wins
+        wins++;
+        alert("You won!");
+        $("#totalWins").html(wins);
+        }
+    
+    function lost()
+        {
+        //adding 1 to losses
+        losses++;
+        alert("You lost!");
+        $("#totalLosses").html(losses);
+        }
+    function reset()
+        {
+        //reseting totalScore and random number
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        }
     
     
     //yellow gem
@@ -33,27 +54,18 @@ $(document).ready(function()
             console.log("Yellow Gem click " +yellowGem);
             //adding up the clicks to totalScore
             totalScore = yellowGem + totalScore;
-            $("#totalScore").html(totalScore);
             //when totalScore equal to randomNumber Win
             if (totalScore === randomNumber)
                 {
-                //adding 1 to wins
-                wins++;
-                alert("You won!");
-                $("#totalWins").html(wins);
-                //reseting totalScore and random number
-                totalScore = 0;
+                win();
+                reset();
                 randomNum();
                 }
             //when totalScore greater than randomNumber lose
             else if (totalScore > randomNumber)
                 {
-                //adding 1 to losses
-                losses++;
-                alert("You lost!");
-                $("#totalLosses").html(losses);
-                //reseting totalScore and random number
-                totalScore = 0;
+                lost();
+                reset();
                 randomNum();
                 }
         });
@@ -63,27 +75,18 @@ $(document).ready(function()
             greenGem = Math.floor(Math.random() * 12);
             console.log("Green Gem click " + greenGem);
             totalScore = greenGem + totalScore;
-            $("#totalScore").html(totalScore);
             //when totalScore equal to randomNumber Win
             if (totalScore === randomNumber)
                 {
-                //adding 1 to wins
-                wins++;
-                alert("You won!");
-                $("#totalWins").html(wins);
-                //reseting totalScore and random number
-                totalScore = 0;
+                win();
+                reset();
                 randomNum();
                 }
             //when totalScore greater than randomNumber lose
             else if (totalScore > randomNumber)
                 {
-                //adding 1 to losses
-                losses++;
-                alert("You lost!");
-                $("#totalLosses").html(losses);
-                //reseting totalScore and random number
-                totalScore = 0;
+                lost();
+                reset();
                 randomNum();
                 }
         });
@@ -93,27 +96,18 @@ $(document).ready(function()
             redGem = Math.floor(Math.random() * 12);
             console.log("Red Gem click " +redGem);
             totalScore = redGem + totalScore;
-            $("#totalScore").html(totalScore);
             //when totalScore equal to randomNumber Win
             if (totalScore === randomNumber)
                 {
-                //adding 1 to wins
-                wins++;
-                alert("You won!");
-                $("#totalWins").html(wins);
-                //reseting totalScore and random number
-                totalScore = 0;
+                win();
+                reset();
                 randomNum();
                 }
             //when totalScore greater than randomNumber lose
             else if (totalScore > randomNumber)
                 {
-                //adding 1 to losses
-                losses++;
-                alert("You lost!");
-                $("#totalLosses").html(losses);
-                //reseting totalScore and random number
-                totalScore = 0;
+                lost();
+                reset();
                 randomNum();
                 }
         });
@@ -123,27 +117,18 @@ $(document).ready(function()
             blueGem = Math.floor(Math.random() * 12);
             console.log("Blue Gem click " +blueGem);
             totalScore = blueGem + totalScore;
-            $("#totalScore").html(totalScore);
             //when totalScore equal to randomNumber Win
             if (totalScore === randomNumber)
                 {
-                //adding 1 to wins
-                wins++;
-                alert("You won!");
-                $("#totalWins").html(wins);
-                //reseting totalScore and random number
-                totalScore = 0;
+                win();
+                reset();
                 randomNum();
                 }
             //when totalScore greater than randomNumber lose
             else if (totalScore > randomNumber)
                 {
-                //adding 1 to losses
-                losses++;
-                alert("You lost!");
-                $("#totalLosses").html(losses);
-                //reseting totalScore and random number
-                totalScore = 0;
+                lost();
+                reset();
                 randomNum();
                 }
         });
