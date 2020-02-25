@@ -12,27 +12,38 @@ $(document).ready(function()
     var losses = 0;
 
     var totalScore = 0;
+    randomNum();
 
-    randomNumber = Math.floor(Math.random() * 120);
-    console.log(randomNumber);
-    $(".match").html(randomNumber);
+    function randomNum()
+        {
+        randomNumber = Math.floor(Math.random() * 120);
+        console.log(randomNumber);
+        $(".match").html(randomNumber);
+        };
+
+    
     //random generate each gem between 1 and 12
     //yellow gem
     $("#yellow").on("click",function(){
         yellowGem = Math.floor(Math.random() * 12);
         console.log(yellowGem);
         totalScore = yellowGem + totalScore;
-        console.log(totalScore);
+        $("#totalScore").html(totalScore);
         if (totalScore === randomNumber)
         {
             wins++;
             alert("You won!");
-
+            $("#totalWins").html(wins);
+            totalScore = 0;
+            randomNum();
         }
-        else (totalScore > randomNumber)
+        else if (totalScore > randomNumber)
         {
             losses++;
             alert("You lost!");
+            $("#totalLosses").html(losses);
+            totalScore = 0;
+            randomNum();
         }
         
 
