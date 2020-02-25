@@ -1,6 +1,56 @@
 $(document).ready(function() 
 {
-    var targetNumber = 53;
+  
+  //random generate a number between 19 and 120
+        //var for number
+
+    //random generate each gem between 1 and 12
+        //yellow gem
+        //green gem
+        //blue gem
+        //red gem
+
+
+    //variables for win and lost
+
+    //fuction to counting lost
+
+    //fuction to counting wins
+
+    //function on click on each gem
+
+        //yellow gem click
+
+        //red gem click
+
+        //green gem click
+
+        //blue gem click
+    
+    //function to reset and play again
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    /*  var targetNumber = 53;
 
     $("#number-to-guess").text(targetNumber);
 
