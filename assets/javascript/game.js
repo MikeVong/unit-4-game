@@ -24,56 +24,99 @@ $(document).ready(function()
     
     //random generate each gem between 1 and 12
     //yellow gem
-    $("#yellow").on("click",function(){
-        yellowGem = Math.floor(Math.random() * 12);
-        console.log(yellowGem);
-        totalScore = yellowGem + totalScore;
-        $("#totalScore").html(totalScore);
-        if (totalScore === randomNumber)
+    $("#yellow").on("click",function()
         {
-            wins++;
-            alert("You won!");
-            $("#totalWins").html(wins);
-            totalScore = 0;
-            randomNum();
-        }
-        else if (totalScore > randomNumber)
+            yellowGem = Math.floor(Math.random() * 12);
+            console.log(yellowGem);
+            totalScore = yellowGem + totalScore;
+            $("#totalScore").html(totalScore);
+            if (totalScore === randomNumber)
+                {
+                wins++;
+                alert("You won!");
+                $("#totalWins").html(wins);
+                totalScore = 0;
+                randomNum();
+                }
+            else if (totalScore > randomNumber)
+                {
+                losses++;
+                alert("You lost!");
+                $("#totalLosses").html(losses);
+                totalScore = 0;
+                randomNum();
+                }
+        });
+    //green gem
+    $("#green").on("click",function()
         {
-            losses++;
-            alert("You lost!");
-            $("#totalLosses").html(losses);
-            totalScore = 0;
-            randomNum();
-        }
-        
-
-
-
-
-    });
-        
-        //green gem
-        //blue gem
-        //red gem
-
-
-    //variables for win and lost
-
-    //fuction to counting lost
-
-    //fuction to counting wins
-
-    //function on click on each gem
-
-        //yellow gem click
-
-        //red gem click
-
-        //green gem click
-
-        //blue gem click
-    
-    //function to reset and play again
+            greenGem = Math.floor(Math.random() * 12);
+            console.log(yellowGem);
+            totalScore = yellowGem + totalScore;
+            $("#totalScore").html(totalScore);
+            if (totalScore === randomNumber)
+                {
+                wins++;
+                alert("You won!");
+                $("#totalWins").html(wins);
+                totalScore = 0;
+                randomNum();
+                }
+            else if (totalScore > randomNumber)
+                {
+                losses++;
+                alert("You lost!");
+                $("#totalLosses").html(losses);
+                totalScore = 0;
+                randomNum();
+                }
+        });
+    //red gem
+    $("#red").on("click",function()
+        {
+            redGem = Math.floor(Math.random() * 12);
+            console.log(yellowGem);
+            totalScore = yellowGem + totalScore;
+            $("#totalScore").html(totalScore);
+            if (totalScore === randomNumber)
+                {
+                wins++;
+                alert("You won!");
+                $("#totalWins").html(wins);
+                totalScore = 0;
+                randomNum();
+                }
+            else if (totalScore > randomNumber)
+                {
+                losses++;
+                alert("You lost!");
+                $("#totalLosses").html(losses);
+                totalScore = 0;
+                randomNum();
+                }
+        });
+    //blue gem
+    $("#blue").on("click",function()
+        {
+            blueGem = Math.floor(Math.random() * 12);
+            console.log(yellowGem);
+            totalScore = yellowGem + totalScore;
+            $("#totalScore").html(totalScore);
+            if (totalScore === randomNumber)
+                {
+                wins++;
+                alert("You won!");
+                $("#totalWins").html(wins);
+                totalScore = 0;
+                randomNum();
+                }
+            else if (totalScore > randomNumber)
+                {
+                losses++;
+                alert("You lost!");
+                $("#totalLosses").html(losses);
+                totalScore = 0;
+                randomNum();
+                }
+        });
 });
-  
-
