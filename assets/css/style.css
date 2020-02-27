@@ -1,17 +1,19 @@
 .size
     {
     width: 100px; 
-    height: 100px;
+    height: 100px;   
     }
 .counter
     {
     margin: 22px;
     text-align: center;
     font-size: 40px;
-    color: green;
+    color:blue;
+    padding-left: 50px;
     }
 #matchStyle
-    {  
+    {
+    padding-left: 122px;
     text-align: center;
     font-size: 70px;
     color: red;
@@ -19,9 +21,12 @@
     }
 .textStyle
     {
-    
     text-align: center;
     font-size: 32px;
     margin: 22px;
-    color: blue;
+    color: yellow;
+    }
+.backStyle
+    {
+    padding-top: 15px;
     }

@@ -82,28 +82,28 @@ $(document).ready(function()
     $("#yellow").on("click",function()
         {
             //adding up the clicks to totalScore
-            totalScore = yellowGem + totalScore;
+            totalScore += yellowGem;
             $("#totalScore").html(totalScore);
             condition();
         });
     //green gem
     $("#green").on("click",function()
         {
-            totalScore = greenGem + totalScore;
+            totalScore += greenGem;
             $("#totalScore").html(totalScore);
             condition();
         });
     //red gem
     $("#red").on("click",function()
         {
-            totalScore = redGem + totalScore;
+            totalScore += redGem;
             $("#totalScore").html(totalScore);
             condition();
         });
     //blue gem
     $("#blue").on("click",function()
         {
-            totalScore = blueGem + totalScore;
+            totalScore += blueGem;
             $("#totalScore").html(totalScore);
             condition();
         });
