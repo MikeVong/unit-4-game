@@ -1,0 +1,27 @@
+.size
+    {
+    width: 100px; 
+    height: 100px;
+    }
+.counter
+    {
+    margin: 22px;
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    }
+#matchStyle
+    {  
+    text-align: center;
+    font-size: 70px;
+    color: red;
+    font-family: "Times New Roman", Times, serif;
+    }
+.textStyle
+    {
+    
+    text-align: center;
+    font-size: 32px;
+    margin: 22px;
+    color: blue;
+    }

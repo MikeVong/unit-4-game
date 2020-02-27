@@ -19,7 +19,7 @@
 </head>
   
 <body>
-    <div class="jumbotron">
+    <div class="jumbotron bg-info">
         <h1 class="display-6">Crystal Collector</h1>
         <p>You will be given a random number at the begining of this game.</p>
         <p>There are four crystals below. By clicking on a crystal, you will add a specific number of points to your total score.</p>
@@ -27,38 +27,38 @@
         <p>Each crystal's value remains hidden until you click it.</p>
         <p>Each crystal's value changes each time the game starts.</p>
     </div>
-    <div class="random-number" id="randNum">
+    <div class="container bg-info">
         <div class="row">
             <div class="col-md-2">
-                <button id="yellow"><img src="./assets/images/yellowgem.jpg" alt=""></button>
+                <button id="yellow"><img src="./assets/images/yellowgem.jpg" class ="size" alt=""></button>
             </div>
             <div class="col-md-2">
-                <button id="green"><img src="./assets/images/greengem.jpg" alt=""></button>
+                <button id="green"><img src="./assets/images/greengem.jpg" class ="size" alt=""></button>
             </div>
             <div class="col-md-2">
-                <button id="red"><img src="./assets/images/redgem.jpg" alt=""></button>
+                <button id="red"><img src="./assets/images/redgem.jpg" class ="size" alt=""></button>
             </div>
             <div class="col-md-2">
-                <button id="blue"><img src="./assets/images/bluegem.jpg" alt=""></button>
+                <button id="blue"><img src="./assets/images/bluegem.jpg"  class ="size" alt=""></button>
             </div>
             <div class="col-md-4">
                 <h6>Match this number: </h6>
-                <div class="row match"></div>
+                <div class="row match " id="matchStyle"></div>
             </div>
         </div>
     </div>
         <div class="row">
             <div class="col-md-3">
-                <h3>Wins</h3>
-                <div id="totalWins"></div>
+                <h3>Wins <span id="totalWins" class="textStyle"></span></h3>
+                
             </div>
             <div class="col-md-3">
-                <h3>Losses</h3>
-                <div id="totalLosses"></div>
+                <h3>Losses  <span id="totalLosses" class="textStyle"></span></h3>
+                
             </div>
             <div class="col-md-6">
-                <h3>Your total score is: </h3>
-                <div id="totalScore"></div>
+                <h3>Your total score is: <span class="counter" id="totalScore"></span></h3>
+                
             </div>
         </div>
     

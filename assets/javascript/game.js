@@ -11,12 +11,26 @@ $(document).ready(function()
     var totalScore = 0;
     //start the random number at the begin of the game
     randomNum();
+    gemRandom();
+
+    function gemRandom()
+        {
+        // //random generate a number between 1 and 12
+        yellowGem = Math.floor(Math.random() * 11 + 1);
+        console.log("Yellow Gem " + yellowGem);
+        greenGem = Math.floor(Math.random() * 11 + 1);
+        console.log("Green Gem " + greenGem);
+        redGem = Math.floor(Math.random() * 11 + 1);
+        console.log("Red Gem " + redGem);
+        blueGem = Math.floor(Math.random() * 11 + 1);
+        console.log("Blue Gem " + blueGem);
+        };
     
     
      //random generate a number between 19 and 120 and displaying it
     function randomNum()
         {
-        randomNumber = Math.floor(Math.random() * 120);
+        randomNumber = Math.floor(Math.random() * 119 + 1);
         console.log(randomNumber);
         $(".match").html(randomNumber);
         };
@@ -51,6 +65,7 @@ $(document).ready(function()
             win();
             reset();
             randomNum();
+            gemRandom();
             }
         //when totalScore greater than randomNumber lose
         else if (totalScore > randomNumber)
@@ -58,6 +73,7 @@ $(document).ready(function()
             lost();
             reset();
             randomNum();
+            gemRandom();
             }
         };
     
@@ -65,9 +81,6 @@ $(document).ready(function()
     //yellow gem
     $("#yellow").on("click",function()
         {
-            // //random generate a number between 1 and 12
-            yellowGem = Math.floor(Math.random() * 12);
-            console.log("Yellow Gem click " +yellowGem);
             //adding up the clicks to totalScore
             totalScore = yellowGem + totalScore;
             $("#totalScore").html(totalScore);
@@ -76,8 +89,6 @@ $(document).ready(function()
     //green gem
     $("#green").on("click",function()
         {
-            greenGem = Math.floor(Math.random() * 12);
-            console.log("Green Gem click " + greenGem);
             totalScore = greenGem + totalScore;
             $("#totalScore").html(totalScore);
             condition();
@@ -85,8 +96,6 @@ $(document).ready(function()
     //red gem
     $("#red").on("click",function()
         {
-            redGem = Math.floor(Math.random() * 12);
-            console.log("Red Gem click " +redGem);
             totalScore = redGem + totalScore;
             $("#totalScore").html(totalScore);
             condition();
@@ -94,8 +103,6 @@ $(document).ready(function()
     //blue gem
     $("#blue").on("click",function()
         {
-            blueGem = Math.floor(Math.random() * 12);
-            console.log("Blue Gem click " +blueGem);
             totalScore = blueGem + totalScore;
             $("#totalScore").html(totalScore);
             condition();
